@@ -3,9 +3,12 @@ import "./App.css";
 
 import Header from './components/Header/Header';
 import Login from './Login';
+import { useStateValue } from "./states/StateProvider";
 
 function App() {
-  const user = null;
+  const [{ user }, dispatch] = useStateValue();
+
+
   return (
     <div className="app">
       {!user ? (
